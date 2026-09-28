@@ -1,67 +1,268 @@
-# lumina-adventure
-![Alt text](assets/kingdom.png)
+# ⚔️ Lumina Adventure
 
-**Lumina Adventure**\
-Genre: Role-playing game\
-Summary: Fight your way against monsters, save the villagers, and save the kingdom from the tyrant king!
+**A terminal-based RPG powered by Node.js and Express.**
 
----
+Lumina Adventure is an experimental role-playing game where HTTP requests become player commands. Instead of controlling the game through a traditional graphical interface, players explore the world, fight enemies, interact with characters, and progress through the adventure directly from the terminal.
 
-Welcome to Tutorial Area!!!
-
-Oracle: You have been summoned to protect the Kingdom of Lumina but have to prove yourself worthy of the power of Hero.
-Go forth Hero. And may the Great Spirit be with you.
-
-You open your eyes and now you are transported to the tutorial area.
+The project was originally built as a learning exercise to explore **server-side JavaScript, application logic, routing, state management, and interactive systems**.
 
 ---
 
-## How to install:
+## 🎮 The Concept
 
-1. Ensure you have VS code in your computer.
-   You can get Video Studio Code here: https://code.visualstudio.com
+You have been summoned to protect the **Kingdom of Lumina**.
 
-2. Ensure you have node.js on your computer.
-   You can get node.js here: https://nodejs.org/en/
+Fight monsters, help villagers, explore the world, and grow strong enough to challenge the tyrant threatening the kingdom.
 
-3. Git clone my game here: https://github.com/steakncheese/tutorial-server.git
+The unusual part?
 
----
+**Your terminal is the game controller.**
 
-## How to start the game:
+```bash
+curl localhost:4000/w
+```
 
-1. Open a terminal in VS code.
+Every HTTP request represents an action inside the game.
 
-2. Type npm install express. ** Do this only once. You never have to do this again. **
-
-3. Type npm start. This will start the server.
-
-4. Open another terminal. Type curl localhost:4000/ to start the game
-
----
-
-## Tips on playing the game:
-
-1. Every action uses curl. So if you want to move north, the instructions say /w. It means to type out curl localhost:4000/w to go north.
-
-2. To prevent typing curls over and over again, press up on your terminal so it displays your previous command.
-
-3. Because you have read this readme, I will give you a cheat code. Type /teleport to go back on your original location.
+```text
+Terminal Command
+      ↓
+Express Route
+      ↓
+Game Logic
+      ↓
+Player / World State
+      ↓
+Game Response
+```
 
 ---
 
-## How to play the game:
+## 🧠 What This Project Demonstrates
 
-Instructions: To move, type /w North, /s South, /a West, or /d East then press Enter.
+Lumina Adventure explores several software-development concepts through a simple RPG:
 
-To see info on current location: /o or observe
+- Node.js server-side development
+- Express routing
+- HTTP-based interactions
+- Application and player state
+- Coordinate-based world navigation
+- Combat systems
+- NPC interactions
+- Events and quests
+- Inventory and rewards
+- Conditional game logic
 
-**_ Recommendation: Use /o in every tile you go _**
+Although this is an early learning project, it helped develop the systems-thinking and programming fundamentals that I later applied to larger automation and application-development work.
 
-To see where you are located: /lor /location
+---
 
-To attack an enemy: /k or attack
+## 🛠️ Technology
 
-The other things you must learn as you go. For it is by fire that gold is made.
+- **JavaScript**
+- **Node.js**
+- **Express**
+- **REST-style HTTP routing**
+- **cURL** for player interaction
 
-Enjoy!!!
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+Make sure you have installed:
+
+- Node.js
+- npm
+- Git
+- A terminal or command prompt
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/romellbermundo/lumina-adventure.git
+cd lumina-adventure
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the server
+
+```bash
+npm start
+```
+
+The game server runs locally on:
+
+```text
+localhost:4000
+```
+
+### 4. Start the adventure
+
+Open another terminal and enter:
+
+```bash
+curl localhost:4000/
+```
+
+Welcome to Lumina.
+
+---
+
+## 🗺️ How to Play
+
+Actions are performed by sending requests to the game server.
+
+### Movement
+
+```bash
+curl localhost:4000/w
+```
+
+Move north.
+
+```bash
+curl localhost:4000/s
+```
+
+Move south.
+
+```bash
+curl localhost:4000/a
+```
+
+Move west.
+
+```bash
+curl localhost:4000/d
+```
+
+Move east.
+
+### Observe
+
+Inspect your current location:
+
+```bash
+curl localhost:4000/o
+```
+
+Exploration is important. Observe new locations to discover enemies, characters, events, and other interactions.
+
+### Location
+
+Check your current position:
+
+```bash
+curl localhost:4000/location
+```
+
+### Combat
+
+Attack an enemy:
+
+```bash
+curl localhost:4000/attack
+```
+
+Additional commands and interactions can be discovered as you explore the game.
+
+---
+
+## 🧩 Game Systems
+
+Lumina Adventure includes several interconnected systems:
+
+**World Exploration**  
+Navigate through a coordinate-based game world.
+
+**Combat**  
+Encounter and fight enemies as you explore.
+
+**NPC Interaction**  
+Meet characters and interact with them through game commands.
+
+**Events & Quests**  
+Trigger events and progress through different encounters.
+
+**Player Progression**  
+Manage player status, healing, rewards, and other gameplay mechanics.
+
+The goal of the project was to experiment with how these systems could interact through a simple server-side architecture.
+
+---
+
+## 🏗️ Architecture
+
+The current version uses a deliberately simple architecture centered around an Express server.
+
+```text
+PLAYER
+  │
+  │ HTTP / cURL
+  ▼
+EXPRESS ROUTES
+  │
+  ▼
+GAME LOGIC
+  │
+  ├── Movement
+  ├── Combat
+  ├── NPCs
+  ├── Events
+  ├── Items
+  └── Player State
+  │
+  ▼
+GAME RESPONSE
+```
+
+A future version could separate these systems into individual modules and introduce persistent game state, automated testing, and a dedicated user interface.
+
+---
+
+## 💡 Lessons From the Project
+
+Lumina Adventure started as a programming exercise, but it introduced several concepts that became important in my later development work:
+
+- breaking a larger problem into smaller systems
+- translating user actions into application logic
+- managing interactions between different pieces of state
+- designing repeatable program behavior
+- thinking beyond individual functions toward complete workflows
+
+Those same principles now influence how I approach **GIS development, systems automation, and geospatial workflows**.
+
+---
+
+## 🔮 Possible Future Improvements
+
+If the project is revisited, potential improvements include:
+
+- modularizing the game engine
+- separating routes from game logic
+- persistent player state
+- automated tests
+- improved error handling
+- a browser-based interface
+- API documentation
+- Docker containerization
+- cloud deployment
+
+The original implementation is intentionally preserved as an example of an earlier stage in my software-development journey.
+
+---
+
+## 👨‍💻 About the Developer
+
+I'm **Romell Bermundo**, a GIS Developer focused on **systems automation, geospatial development, and practical software solutions**.
+
+My professional work focuses on turning complex and repetitive processes into reliable systems using technologies such as Python, ArcPy, FME, SQL, and enterprise GIS.
+
+Lumina Adventure represents an earlier part of that journey: learning how to turn rules, state, and user actions into a working software system.
