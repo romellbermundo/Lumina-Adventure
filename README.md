@@ -125,4 +125,286 @@ Explore the world to uncover encounters and objectives.
 
 ### ❤️ Player Status
 
+Check your character's condition and progress while playing.
+
+### 🧭 Observation
+
+Inspect your current location to discover enemies, characters, and other important information.
+
+---
+
+## 🛠️ Technology
+
+Lumina Adventure is built using:
+
+- **JavaScript**
+- **Node.js**
+- **Express.js**
+- **HTTP requests**
+- **REST-style routes**
+- **Git**
+- **GitHub**
+
+The project explores how a web server can be used for something very different from a traditional website: **running an interactive game.**
+
+---
+
+## 🚀 Installation
+
+### Requirements
+
+Make sure you have installed:
+
+- Node.js
+- npm
+- Git
+
+A terminal capable of running `curl` is also required.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/romellbermundo/lumina-adventure.git
+```
+
+### 2. Enter the project directory
+
+```bash
+cd lumina-adventure
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the game server
+
+```bash
+npm start
+```
+
+The game server runs locally on:
+
+```text
+http://localhost:4000
+```
+
+### 5. Open another terminal
+
+Start the adventure with:
+
+```bash
+curl localhost:4000/
+```
+
+Welcome to Lumina.
+
+---
+
+## 🕹️ How to Play
+
+Every action in Lumina Adventure is performed by sending a request to the game server.
+
+For example, if the game tells you:
+
+```text
+/w
+```
+
+enter:
+
+```bash
+curl localhost:4000/w
+```
+
+The server will process your action and tell you what happens.
+
+### Movement
+
+Move north:
+
+```bash
+curl localhost:4000/w
+```
+
+Move south:
+
+```bash
+curl localhost:4000/s
+```
+
+Move west:
+
+```bash
+curl localhost:4000/a
+```
+
+Move east:
+
+```bash
+curl localhost:4000/d
+```
+
+---
+
+## ⌨️ Commands
+
+### 🧭 Movement
+
+| Action | Command |
+|---|---|
+| North | `/w` |
+| South | `/s` |
+| West | `/a` |
+| East | `/d` |
+
+Example:
+
+```bash
+curl localhost:4000/w
+```
+
+### 👀 Observe
+
+Inspect your current location:
+
+```text
+/o
+```
+
+or:
+
+```text
+/observe
+```
+
+Example:
+
+```bash
+curl localhost:4000/o
+```
+
+**Tip:** Observe whenever you enter a new location.
+
+### 📍 Location
+
+Check your current position:
+
+```text
+/location
+```
+
+Example:
+
+```bash
+curl localhost:4000/location
+```
+
+### ⚔️ Attack
+
+Attack an enemy:
+
+```text
+/k
+```
+
+or:
+
+```text
+/attack
+```
+
+Example:
+
+```bash
+curl localhost:4000/attack
+```
+
+There are more commands and interactions waiting inside the game.
+
+**Part of the adventure is discovering them.**
+
+---
+
+## 💡 Gameplay Tips
+
+### Use Your Command History
+
+You don't need to type:
+
+```bash
+curl localhost:4000/
+```
+
+from scratch every time.
+
+Press the **Up Arrow** in your terminal to bring back your previous command, then change the route.
+
+For example:
+
+```text
+curl localhost:4000/w
+                     ↑
+              change only this
+```
+
+This makes exploring much faster.
+
+### Observe Often
+
+When entering a new location, use:
+
+```bash
+curl localhost:4000/o
+```
+
+The world may contain enemies, NPCs, events, or other things worth investigating.
+
+### Explore
+
+Not everything is explained immediately.
+
+Experiment with commands, explore different locations, and discover how the world works.
+
+> **For it is by fire that gold is made.**
+
+---
+
+## 🧙 A Little Secret
+
+Since you actually read the README, here's a cheat code.
+
+If you get lost, try:
+
+```bash
+curl localhost:4000/teleport
+```
+
+It will return you to your original location.
+
+Use it wisely.
+
+---
+
+# ⚔️ Enter Lumina
+
+The Oracle has summoned you.
+
+The kingdom is waiting.
+
+Start the server:
+
+```bash
+npm start
+```
+
+Open another terminal:
+
+```bash
+curl localhost:4000/
+```
+
+**Your adventure begins.**
 Check
