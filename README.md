@@ -1,5 +1,5 @@
 # ⚔️ Lumina Adventure
-
+![Alt text](assets/kingdom.png)
 **A terminal-based RPG powered by Node.js and Express.**
 
 Lumina Adventure is an experimental role-playing game where HTTP requests become player commands. Instead of controlling the game through a traditional graphical interface, players explore the world, fight enemies, interact with characters, and progress through the adventure directly from the terminal.
